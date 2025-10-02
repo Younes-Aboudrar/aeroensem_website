@@ -1,0 +1,4 @@
+baseURL = 'https://aeroensem.club/'
+languageCode = 'fr-fr'
+title = 'Club AéroENSEM'
+theme = 'ananke'

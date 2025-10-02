@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Club AéroENSEM</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Club AéroENSEM</description>
+    <generator>Hugo</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Thu, 02 Oct 2025 19:19:22 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Home</title>
+      <link>http://localhost:1313/home/</link>
+      <pubDate>Thu, 02 Oct 2025 19:19:22 +0100</pubDate>
+      <guid>http://localhost:1313/home/</guid>
+      <description>&lt;p&gt;This is the home page&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My First Post</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Thu, 02 Oct 2025 19:17:46 +0100</pubDate>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
