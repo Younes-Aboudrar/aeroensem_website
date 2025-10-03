@@ -1,7 +1,32 @@
-baseURL = 'https://aeroensem.club/'
+baseURL = 'https://www.aeroensem.club/'
 languageCode = 'fr-fr'
 title = 'Club AéroENSEM'
 theme = 'ananke'
+
+ignoreLogs = ['warning-goldmark-raw-html']
+
+# Site parameters
+[params]
+  favicon = "/favicon.svg"
+  site_logo = ""
+  description = "Club Aéronautique de l'École Nationale Supérieure d'Électricité et de Mécanique"
+  facebook = ""
+  twitter = ""
+  instagram = "https://instagram.com/clubaero.ensem"
+  youtube = ""
+  github = ""
+  gitlab = ""
+  linkedin = "https://linkedin.com/company/club-aero-ensem"
+  mastodon = ""
+  slack = ""
+  stackoverflow = ""
+  rss = ""
+  # choose a background color from any on this page: https://tachyons.io/docs/themes/skins/
+  background_color_class = "bg-blue"
+  featured_image = "/images/hero-bg.jpg"
+  recent_posts_number = 3
+  
+  custom_css = ["css/custom.css"]
 
 [caches]
   [caches.assets]
@@ -25,3 +50,8 @@ theme = 'ananke'
   [caches.modules]
     dir = ':cacheDir/modules'
     maxAge = -1
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
