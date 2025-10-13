@@ -44,51 +44,112 @@ enableEmoji = true
 
 [menu]
   [[menu.main]]
-    identifier = "archives"
-    parent = ""
-    # you can add extra information before the name (HTML format is supported), such as icons
-    pre = ""
-    # you can add extra information after the name (HTML format is supported), such as icons
-    post = ""
-    name = "Archives"
-    url = "/archives/"
-    # title will be shown when you hover on this menu link
-    title = ""
-    weight = 1
+  identifier = "Home"
+  parent = ""
+  pre = ""
+  post = ""
+  name = "Home"
+  url = "/"
+  title = "The main page of the AéroENSEM website"
+  weight = 1
+  [menu.main.params]
+    class = ""
+    draft = false
+    icon = "fa-solid fa-home"
+    type = ""
+    divided = false
+  [[menu.main]]
+  identifier = "Leaders"
+  parent = ""
+  pre = ""
+  post = ""
+  name = "Leaders"
+  url = "/leaders"
+  title = "Board members"
+  weight = 2
+  [menu.main.params]
+    icon = "fa-solid fa-user-circle"
+  [[menu.main]]
+  identifier = "why-join-us"
+  parent = ""
+  pre = ""
+  post = ""
+  name = "Why join us?"
+  url = "/why-join-us"
+  title = "Why join us?"
+  weight = 3
+  [menu.main.params]
+    icon = "fa-solid fa-lightbulb"
+  [[menu.main]]
+  identifier = "history"
+  parent = ""
+  pre = ""
+  post = ""
+  name = "History"
+  url = "/history"
+  title = "History"
+  weight = 4
+  [menu.main.params]
+    icon = "fa-solid fa-history"
+  [[menu.main]]
+  identifier = "reserve-my-place"
+  parent = ""
+  pre = ""
+  post = ""
+  name = "Reserve my place"
+  url = "/reserve-my-place"
+  title = "Reserve my place"
+  weight = 5
+  [menu.main.params]
+    icon = "fa-solid fa-bookmark"
+
+
+
+  #   identifier = "archives"
+  #   parent = ""
+  #   # you can add extra information before the name (HTML format is supported), such as icons
+  #   pre = ""
+  #   # you can add extra information after the name (HTML format is supported), such as icons
+  #   post = ""
+  #   name = "Archives"
+  #   url = "/archives/"
+  #   # title will be shown when you hover on this menu link
+  #   title = ""
+  #   weight = 1
     # FixIt 0.2.14 | NEW add user-defined content to menu items
-    [menu.main.params]
-      # add css class to a specific menu item
-      class = ""
-      # whether set as a draft menu item whose function is similar to a draft post/page
-      draft = false
-      # FixIt 0.2.16 | NEW add fontawesome icon to a specific menu item
-      icon = "fa-solid fa-archive"
-      # FixIt 0.2.16 | NEW set menu item type, optional values: ["mobile", "desktop"]
-      type = ""
-      # FixIt 0.3.9 | NEW whether to show the submenu item divider line
-      divided = false
-  [[menu.main]]
-    identifier = "categories"
-    parent = ""
-    pre = ""
-    post = ""
-    name = "Categories"
-    url = "/categories/"
-    title = ""
-    weight = 2
-    [menu.main.params]
-      icon = "fa-solid fa-folder-tree"
-  [[menu.main]]
-    identifier = "tags"
-    parent = ""
-    pre = ""
-    post = ""
-    name = "Tags"
-    url = "/tags/"
-    title = ""
-    weight = 3
-    [menu.main.params]
-      icon = "fa-solid fa-tags"
+    # [menu.main.params]
+    #   # add css class to a specific menu item
+    #   class = ""
+    #   # whether set as a draft menu item whose function is similar to a draft post/page
+    #   draft = false
+    #   # FixIt 0.2.16 | NEW add fontawesome icon to a specific menu item
+    #   icon = "fa-solid fa-archive"
+    #   # FixIt 0.2.16 | NEW set menu item type, optional values: ["mobile", "desktop"]
+    #   type = ""
+    #   # FixIt 0.3.9 | NEW whether to show the submenu item divider line
+    #   divided = false
+  # [[menu.main]]
+  #   identifier = "categories"
+  #   parent = ""
+  #   pre = ""
+  #   post = ""
+  #   name = "Categories"
+  #   url = "/categories/"
+  #   title = ""
+  #   weight = 2
+  #   [menu.main.params]
+  #     icon = "fa-solid fa-folder-tree"
+  # [[menu.main]]
+  #   identifier = "tags"
+  #   parent = ""
+  #   pre = ""
+  #   post = ""
+  #   name = "Tags"
+  #   url = "/tags/"
+  #   title = ""
+  #   weight = 3
+  #   [menu.main.params]
+  #     icon = "fa-solid fa-tags"
 
 # -------------------------------------------------------------------------------------
 # Related content Configuration
@@ -138,6 +199,14 @@ enableEmoji = true
   [module.hugoVersion]
     extended = true
     min = "0.147.7"
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    source = 'static'
+    target = 'assets'
+
+
 
 # -------------------------------------------------------------------------------------
 # Markup related configuration in Hugo
@@ -247,6 +316,35 @@ enableEmoji = true
 # -------------------------------------------------------------------------------------
 
 [outputFormats]
+  [outputFormats.404]
+    baseName = ''
+    isHTML = true
+    isPlainText = false
+    mediaType = 'text/html'
+    noUgly = false
+    notAlternative = true
+    path = ''
+    permalinkable = true
+    protocol = ''
+    rel = ''
+    root = false
+    ugly = true
+    weight = 0
+  [outputFormats.alias]
+    baseName = ''
+    isHTML = true
+    isPlainText = false
+    mediaType = 'text/html'
+    noUgly = false
+    notAlternative = false
+    path = ''
+    permalinkable = false
+    protocol = ''
+    rel = ''
+    root = false
+    ugly = true
+    weight = 0
+
   # FixIt 0.3.0 | NEW Options to make output /archives/index.html file
   [outputFormats.archives]
     path = "archives"
@@ -285,7 +383,7 @@ enableEmoji = true
     mediaType = "application/json"
     rel = "search"
     isPlainText = true
-    isHTML = false
+    isHTML = true
     permalinkable = true
 
 # -------------------------------------------------------------------------------------
@@ -300,7 +398,7 @@ enableEmoji = true
 # taxonomy = ["html"]
 # term = ["html", "rss"]
 [outputs]
-  _merge = "shallow"
+  # _merge = "shallow"
   home = ["html", "rss", "archives", "offline", "search"]
   page = ["html", "markdown"]
   section = ["html", "rss"]
@@ -313,7 +411,7 @@ enableEmoji = true
 # -------------------------------------------------------------------------------------
 
 [taxonomies]
-  _merge = "shallow"
+  # _merge = "shallow"
   category = "categories"
   tag = "tags"
   collection = "collections"
@@ -331,7 +429,7 @@ enableEmoji = true
   # site keywords
   keywords = ["Hugo", "FixIt", "AéroENSEM", "Club", "ENSEM", "Aéronautique"]
   # site default theme ["light", "dark", "auto"]
-  defaultTheme = "auto"
+  defaultTheme = "dark"
   # which hash function used for SRI, when empty, no SRI is used
   # ["sha256", "sha384", "sha512", "md5"]
   fingerprint = "sha256"
@@ -347,7 +445,7 @@ enableEmoji = true
   capitalizeTitles = true
   # FixIt 0.3.0 | NEW whether to add site title to the title of every page
   # remember to set up your site title in `hugo.toml` (e.g. title = "title")
-  withSiteTitle = true
+  withSiteTitle = false
   # FixIt 0.3.0 | NEW title delimiter when the site title is be added to the title of every page
   titleDelimiter = "-"
   # FixIt 0.3.0 | NEW whether to add site subtitle to the title of index page
@@ -401,9 +499,9 @@ enableEmoji = true
 
   # Search config
   [params.search]
-    enable = false
+    enable = true
     # type of search engine ["algolia", "fuse", "cse", "post-chat"]
-    type = "fuse"
+    type = "cse"
     # max index length of the chunked content
     contentLength = 4000
     # placeholder of the search bar
@@ -416,10 +514,10 @@ enableEmoji = true
     highlightTag = "em"
     # whether to use the absolute URL based on the baseURL in search index
     absoluteURL = false
-    [params.search.algolia]
-      index = ""
-      appID = ""
-      searchKey = ""
+    # [params.search.algolia]
+    #   index = ""
+    #   appID = ""
+    #   searchKey = ""
     [params.search.fuse]
       # FixIt 0.2.17 | NEW https://fusejs.io/api/options.html
       isCaseSensitive = false
@@ -435,28 +533,28 @@ enableEmoji = true
   # FixIt 0.3.16 | NEW Custom Search Engine (CSE)
   [params.cse]
     # Search Engine: ["google", "bing"]
-    engine = ""
+    engine = "google"
     # Search results page URL (layout: search)
     resultsPage = "/search/"
     # Google: https://programmablesearchengine.google.com/
     # Google Custom Search Engine Context
     [params.cse.google]
-      cx = ""
+      cx = "71f4d7ad877004ae6"
     # Bing (Unsupported): https://www.customsearch.ai/
-    [params.cse.bing]
+    # [params.cse.bing]
 
   # Header config
   [params.header]
     # FixIt 0.2.13 | CHANGED desktop header mode ["sticky", "normal", "auto"]
-    desktopMode = "sticky"
+    desktopMode = "auto"
     # FixIt 0.2.13 | CHANGED mobile header mode ["sticky", "normal", "auto"]
     mobileMode = "auto"
     # Header title config
     [params.header.title]
       # URL of the LOGO
-      logo = ""
+      logo = "images/logo.png"
       # title name
-      name = ""
+      name = "Club AéroENSEM"
       # you can add extra information before the name (HTML format is supported), such as icons
       pre = ""
       # you can add extra information after the name (HTML format is supported), such as icons
@@ -464,16 +562,16 @@ enableEmoji = true
       # whether to use typeit animation for title name
       typeit = false
     # FixIt 0.2.12 | NEW Header subtitle config
-    [params.header.subtitle]
-      # subtitle name
-      name = "together we fly together we climb the sky"
-      # whether to use typeit animation for subtitle name
-      typeit = true
+    # [params.header.subtitle]
+    #   # subtitle name
+    #   name = "together we fly together we climb the sky"
+    #   # whether to use typeit animation for subtitle name
+    #   typeit = true
 
   # FixIt 0.2.18 | NEW Breadcrumb config
   [params.breadcrumb]
-    enable = false
-    sticky = false
+    enable = true
+    sticky = true
     showHome = false
     # FixIt 0.3.13 | NEW
     separator = "/"
@@ -482,9 +580,9 @@ enableEmoji = true
   # FixIt 0.3.10 | NEW Post navigation config
   [params.navigation]
     # whether to show the post navigation in section pages scope
-    inSection = false
+    inSection = true
     # whether to reverse the next/previous post navigation order
-    reverse = false
+    reverse = true
 
   # Footer config
   [params.footer]
@@ -494,7 +592,7 @@ enableEmoji = true
     # whether to show the author
     author = true
     # Site creation year
-    since = ""
+    since = "2025"
     # FixIt 0.2.12 | NEW Public network security only in China (HTML format is supported)
     gov = ""
     # ICP info only in China (HTML format is supported)
@@ -503,14 +601,14 @@ enableEmoji = true
     license = ""
     # FixIt 0.3.0 | NEW whether to show Hugo and theme info
     [params.footer.powered]
-      enable = true
-      hugoLogo = true
-      themeLogo = true
+      enable = false
+      hugoLogo = false
+      themeLogo = false
     # FixIt 0.2.17 | CHANGED Site creation time
     [params.footer.siteTime]
       enable = false
       animate = true
-      icon = "fa-solid fa-heartbeat"
+      icon = "fa-solid fa-clock"
       pre = ""
       value = "" # e.g. "2021-12-18T16:15:22+08:00"
     # FixIt 0.2.17 | NEW footer lines order, optional values: ["first", 0, 1, 2, 3, 4, 5, "last"]
@@ -574,7 +672,7 @@ enableEmoji = true
   [params.home]
     # Home page profile
     [params.home.profile]
-      enable = false
+      enable = true
       # Gravatar Email for preferred avatar in home page
       gravatarEmail = ""
       # URL of avatar shown in home page
@@ -582,15 +680,15 @@ enableEmoji = true
       # FixIt 0.2.17 | NEW identifier of avatar menu link
       avatarMenu = ""
       # title shown in home page (HTML format is supported)
-      title = ""
+      title = "Club AéroENSEM"
       # subtitle shown in home page (HTML format is supported)
-      subtitle = ""
+      subtitle = "together we fly together we climb the sky"
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
       social = true
       # disclaimer (HTML format is supported)
-      disclaimer = ""
+      disclaimer = "" # to add the creation date of the club
     # Home page posts
     [params.home.posts]
       enable = true
@@ -599,94 +697,93 @@ enableEmoji = true
 
   # FixIt 0.2.16 | CHANGED Social config about the author
   [params.social]
-    GitHub = ""
-    Linkedin = ""
-    Twitter = ""
-    Instagram = ""
-    Facebook = ""
-    Telegram = ""
-    Medium = ""
-    Gitlab = ""
-    Youtubelegacy = ""
-    Youtubecustom = ""
-    Youtubechannel = ""
-    Tumblr = ""
-    Quora = ""
-    Keybase = ""
-    Pinterest = ""
-    Reddit = ""
-    Codepen = ""
-    FreeCodeCamp = ""
-    Bitbucket = ""
-    Stackoverflow = ""
-    Weibo = ""
-    Odnoklassniki = ""
-    VK = ""
-    Flickr = ""
-    Xing = ""
-    Snapchat = ""
-    Soundcloud = ""
-    Spotify = ""
-    Bandcamp = ""
-    Paypal = ""
-    Fivehundredpx = ""
-    Mix = ""
-    Goodreads = ""
-    Lastfm = ""
-    Foursquare = ""
-    Hackernews = ""
-    Kickstarter = ""
-    Patreon = ""
-    Steam = ""
-    Twitch = ""
-    Strava = ""
-    Skype = ""
-    Whatsapp = ""
-    Zhihu = ""
-    Douban = ""
-    Angellist = ""
-    Slidershare = ""
-    Jsfiddle = ""
-    Deviantart = ""
-    Behance = ""
-    Dribbble = ""
-    Wordpress = ""
-    Vine = ""
-    Googlescholar = ""
-    Researchgate = ""
-    Mastodon = ""
-    Thingiverse = ""
-    Devto = ""
-    Gitea = ""
-    XMPP = ""
-    Matrix = ""
-    Bilibili = ""
-    ORCID = ""
-    Liberapay = ""
-    Ko-Fi = ""
-    BuyMeaCoffee = ""
-    Linktree = ""
-    QQ = ""
-    QQGroup = "" # https://qun.qq.com/join.html
-    Diaspora = ""
-    CSDN = ""
-    Discord = ""
-    DiscordInvite = ""
-    Lichess = ""
-    Pleroma = ""
-    Kaggle = ""
-    MediaWiki= ""
-    Plume = ""
-    HackTheBox = ""
-    RootMe = ""
-    Feishu = ""
-    TryHackMe = ""
-    Douyin = ""
-    TikTok = ""
-    Credly = ""
-    Bluesky = ""
-    Phone = ""
-    Email = ""
+    GitHub = "AeroENSEM"
+    Linkedin = "company/club-aeroensem"
+    Instagram = "club.aeronautique"
+    Facebook = "Club.AeroEnsem"
+    # Telegram = ""
+    # Medium = ""
+    # Gitlab = ""
+    # Youtubelegacy = ""
+    # Youtubecustom = ""
+    # Youtubechannel = ""
+    # Tumblr = ""
+    # Quora = ""
+    # Keybase = ""
+    # Pinterest = ""
+    # Reddit = ""
+    # Codepen = ""
+    # FreeCodeCamp = ""
+    # Bitbucket = ""
+    # Stackoverflow = ""
+    # Weibo = ""
+    # Odnoklassniki = ""
+    # VK = ""
+    # Flickr = ""
+    # Xing = ""
+    # Snapchat = ""
+    # Soundcloud = ""
+    # Spotify = ""
+    # Bandcamp = ""
+    # Paypal = ""
+    # Fivehundredpx = ""
+    # Mix = ""
+    # Goodreads = ""
+    # Lastfm = ""
+    # Foursquare = ""
+    # Hackernews = ""
+    # Kickstarter = ""
+    # Patreon = ""
+    # Steam = ""
+    # Twitch = ""
+    # Strava = ""
+    # Skype = ""
+    # Whatsapp = ""
+    # Zhihu = ""
+    # Douban = ""
+    # Angellist = ""
+    # Slidershare = ""
+    # Jsfiddle = ""
+    # Deviantart = ""
+    # Behance = ""
+    # Dribbble = ""
+    # Wordpress = ""
+    # Vine = ""
+    # Googlescholar = ""
+    # Researchgate = ""
+    # Mastodon = ""
+    # Thingiverse = ""
+    # Devto = ""
+    # Gitea = ""
+    # XMPP = ""
+    # Matrix = ""
+    # Bilibili = ""
+    # ORCID = ""
+    # Liberapay = ""
+    # Ko-Fi = ""
+    # BuyMeaCoffee = ""
+    # Linktree = ""
+    # QQ = ""
+    # QQGroup = "" # https://qun.qq.com/join.html
+    # Diaspora = ""
+    # CSDN = ""
+    # Discord = ""
+    # DiscordInvite = ""
+    # Lichess = ""
+    # Pleroma = ""
+    # Kaggle = ""
+    # MediaWiki= ""
+    # Plume = ""
+    # HackTheBox = ""
+    # RootMe = ""
+    # Feishu = ""
+    # TryHackMe = ""
+    # Douyin = ""
+    # TikTok = ""
+    # Credly = ""
+    # Bluesky = ""
+    Phone = "+212641474248"
+    Email = "club-aeronautique@ensem.ac.ma"
     RSS = true
     # custom social links like the following
     # [params.social.twitter]
@@ -897,11 +994,11 @@ enableEmoji = true
   [params.backToTop]
     enable = true
     # Scroll percent label in b2t button
-    scrollpercent = false
+    scrollpercent = true
 
   # FixIt 0.2.16 | NEW Reading progress bar
   [params.readingProgress]
-    enable = false
+    enable = true
     # Available values: ["left", "right"]
     start = "left"
     # Available values: ["top", "bottom"]
@@ -986,9 +1083,9 @@ enableEmoji = true
   # FixIt 0.3.17 | NEW Image config
   [params.image]
     # cache remote images for better optimisations
-    cacheRemote = false
+    cacheRemote = true
     # Image resizing and optimisation
-    optimise = false
+    optimise = true
 
   # FixIt 0.3.12 | NEW Custom partials config
   # Custom partials must be stored in the /layouts/partials/ directory.
@@ -1185,7 +1282,7 @@ enableEmoji = true
     # Mapbox GL JS config (https://docs.mapbox.com/mapbox-gl-js)
     [params.page.mapbox]
       # access token of Mapbox GL JS
-      accessToken = ""
+      accessToken = "pk.eyJ1IjoiYWVyb2Vuc2VtIiwiYSI6ImNtZ2RqdHZ0bjFiZmQyeHI1c2RhMXNzYjQifQ.odIVtEDzPJyHxf7oVNfcDw"
       # style for the light theme
       lightStyle = "mapbox://styles/mapbox/light-v11"
       # style for the dark theme
@@ -1203,7 +1300,7 @@ enableEmoji = true
       enable = false
       count = 5
       # FixIt 0.3.20 | NEW position of related content, optional values: ["aside", "footer"]
-      position = ["aside", "footer"]
+      position = "aside"
     # FixIt 0.2.17 | NEW Donate (Sponsor) settings
     [params.page.reward]
       enable = false
